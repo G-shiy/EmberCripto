@@ -1,0 +1,1 @@
+{"buildTargets":["bash","build","fix","logs","remove","restart","stop","stop-all","up"],"launchTargets":[],"customConfigurationProvider":{"workspaceBrowse":{"browsePath":[],"compilerArgs":[]},"fileIndex":[]}}

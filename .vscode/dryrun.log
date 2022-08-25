@@ -1,0 +1,5 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/shiy/Desktop/ToTheMoon/EmberCripto'
+docker-compose -f docker-compose.yml build
+make: Leaving directory '/home/shiy/Desktop/ToTheMoon/EmberCripto'
+ 

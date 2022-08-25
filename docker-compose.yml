@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  EmberCripto:
+    container_name: EmberCripto
+    image: postgres:13.4-alpine
+    restart: always
+    user: postgres  # importante definir o usuário
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    environment:
+      - LC_ALL=C.UTF-8
+      - POSTGRES_PASSWORD=teste123  # senha padrão
+      - POSTGRES_USER=postgres # usuário padrão
+      - POSTGRES_DB=db  # necessário porque foi configurado assim no settings
+    ports:
+      - 5432:5432  # repare na porta externa 5433
+    networks:
+      - postgres
+
+volumes:
+  pgdata:
+
+networks:
+  postgres:
