@@ -4,29 +4,6 @@ const bcrypt = require("bcrypt");
 require("dotenv").config();
 
 module.exports = {
-  async login2(req, res) {
-    try {
-      const { email, password } = req.body;
-      const user = await User.findOne({ where: { email } });
-      if (user) {
-        const validPass = await bcrypt.compare(password, user.password);
-        if (!validPass) return res.status(400).json("Senha incorreta");
-      }
-      try {
-        const token = jwt.sign({ email: user.email }, process.env.SECRET, {
-          expiresIn: 300,
-        });
-        return res
-          .status(200)
-          .json({ LoggedIn: email, auth: true, token: token });
-      } catch (e) {
-        return res.status(400).json({ auth: false, reason: e });
-      }
-    } catch (e) {
-      return res.json(e.message);
-    }
-  },
-
   async login(req, res) {
     const { email, password } = req.body;
     const user = await User.findOne({ where: { email } });
