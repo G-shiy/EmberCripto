@@ -15,5 +15,14 @@ const User = connection.define("users", {
     type: DataTypes.STRING,
     allowNull: false,
   },
+  phone: {
+    type: DataTypes.STRING,
+    allowNull: true,
+  },
+  is_admin: {
+    type: DataTypes.BOOLEAN,
+    defaultValue: false,
+    allowNull: false,
+  },
 });
 module.exports = User;

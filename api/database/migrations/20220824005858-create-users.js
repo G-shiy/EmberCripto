@@ -22,6 +22,15 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
+      phone:{
+        type: Sequelize.STRING,
+        allowNull: true
+      },
+      is_admin:{
+        type: Sequelize.BOOLEAN,
+        defaltValue: false,
+        allowNull: false,
+      },
       created_at:{
         type: Sequelize.DATE,
         allowNull: false,
