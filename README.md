@@ -10,9 +10,9 @@ A aplicação contém um uma pasta config com o arquivo database.js.
 Lá você ira configurar a rota, caso use docker pode apenas dar um
 `docker-compose -f docker-compose.yml` para rodar a database no docker
 
-**Linux
+**Linux**
 
-**Observação: O Banco de dados virá com uma senha fraca ou qualquer 
+**Observação: O Banco de dados virá com uma senha fraca ou qualquer** 
 **barreira de segurança, recomendo fortemente utilizar uma senha**
 **para DB em produção**
 
